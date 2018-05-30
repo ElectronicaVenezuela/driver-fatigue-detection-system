@@ -13,9 +13,10 @@ import cv2
 
 def sound_alarm(path):
 	# play an alarm sound
-	music = pyglet.resource.media('alarm.wav')
-        music.play()
-        pyglet.app.run()
+	#music = pyglet.resource.media('alarm.wav')
+    #    music.play()
+    #    pyglet.app.run()
+    pass
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
@@ -120,11 +121,11 @@ while True:
 					# check to see if an alarm file was supplied,
 					# and if so, start a thread to have the alarm
 					# sound played in the background
-					if args["alarm"] != "":
-						t = Thread(target=sound_alarm,
-							args=(args["alarm"],))
-						t.deamon = True
-						t.start()
+					#if args["alarm"] != "":
+					#	t = Thread(target=sound_alarm,
+					#		args=(args["alarm"],))
+					#	t.deamon = True
+					#	t.start()
 
 				# draw an alarm on the frame
 				cv2.putText(frame, "DROWSINESS ALERT!", (10, 30),
